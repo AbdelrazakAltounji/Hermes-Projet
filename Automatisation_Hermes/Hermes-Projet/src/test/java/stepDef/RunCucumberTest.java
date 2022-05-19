@@ -9,7 +9,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
 //@RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/cucumber", glue= {"StepDefinitions"},monochrome=true,plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
+@CucumberOptions(features="src/test/resources/cucumber", glue= {"StepDefinitions"},monochrome=true, plugin = { "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 @IncludeEngines("cucumber")
 @SelectClasspathResource("cucumber")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
