@@ -24,7 +24,7 @@
 			#Scenario: Effacer la valeur rentree
 				#Feature: Effacer la valeur
 				
-					Example: deuxieme test
+					#Example: deuxieme test
 					#Given Je navigue sur le site Hermes en rentrant les valeurs Tpa:<valeur1> et Code article:<valeur2>
 					#And Appuie sur la fleche pour acceder au tableau de valeur 
 					#And appuyer sur utiliser
