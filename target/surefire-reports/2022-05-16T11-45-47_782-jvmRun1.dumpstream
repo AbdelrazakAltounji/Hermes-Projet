@@ -1,0 +1,9 @@
+# Created at 2022-05-16T11:46:14.417
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'trois champs: numero programme "125706" , date de fin et quantite planifie "55" et je verifie les informations(classpath:cucumber/PT-11.feature:20)'.
+
+# Created at 2022-05-16T11:46:14.419
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[0m'.
+
+# Created at 2022-05-16T11:46:14.430
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream ' numero programme "125706" , date de fin et quantite planifie "55" et je verifie les informations(classpath:cucumber/PT-11.feature:20)'.
+

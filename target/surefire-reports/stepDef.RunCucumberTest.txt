@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: stepDef.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.241 s - in stepDef.RunCucumberTest
