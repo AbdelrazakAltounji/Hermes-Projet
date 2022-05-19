@@ -79,13 +79,6 @@ public class StepDefinitionsIncrementation {
 	}
 	
 	
-	//@And("revenir a la page de depart")
-	//public void appuyer_touches() {
-		//WebElement back = driver1.findElement(By.id("Prev"));
-
-		//back.sendKeys(Keys.F12);
-		
-	//}
 	
 	
 }
