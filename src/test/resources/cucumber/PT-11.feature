@@ -1,13 +1,13 @@
 
 
-Feature: Naviguer sur sit Hermes
+#Feature: Naviguer sur sit Hermes
 
 
 		
-			@TEST_PT-11
-			Scenario: Naviguer sur site Hermes
-				Feature: Naviguer sur un site web
-				 Test a realiser pour naviguer sur un site web
+			#@TEST_PT-11
+			#Scenario: Naviguer sur site Hermes
+				#Feature: Naviguer sur un site web
+				 #Test a realiser pour naviguer sur un site web
 				 
 				  #Example: premier test
 				   # Given Que je suis sur le site 
@@ -21,14 +21,14 @@ Feature: Naviguer sur sit Hermes
 					  	#And Dans la liste deroulante Ordre de tri, je sélectionne <valeur5>
 						
 					
-			Scenario: Effacer la valeur rentree
-				Feature: Effacer la valeur
+			#Scenario: Effacer la valeur rentree
+			#	Feature: Effacer la valeur
 				
-					Example: deuxieme test
-					Given Je navigue sur le site Hermes en rentrant les valeurs Tpa:<valeur1> et Code article:<valeur2>
-					And Appuie sur la fleche pour acceder au tableau de valeur 
-					And appuyer sur utiliser
-					And selectioner la valeur a supprimer <valeur4> et appuyer sur SUPPR+ENTRER
+					#Example: deuxieme test
+					#Given Je navigue sur le site Hermes en rentrant les valeurs Tpa:<valeur1> et Code article:<valeur2>
+					#And Appuie sur la fleche pour acceder au tableau de valeur 
+					#And appuyer sur utiliser
+					#And selectioner la valeur a supprimer <valeur4> et appuyer sur SUPPR+ENTRER
 										
 			#Scenario: Erreur mot de passe
 				#Feature: se tromper de mot de passe
