@@ -11,7 +11,7 @@ Feature: Naviguer sur sit Hermes
 				 
 				  Example: premier test
 				    Given Que je suis sur le site 
-						#And Que je saisisse mes identifiants et que je me connecte
+						And Que je saisisse mes identifiants et que je me connecte
 						And Dans le menu M3 je cherche le "MMS001" pour avoir le code article et appuie sur ENTRER
 						And Je rentre les valeurs TpA = <valeur1> et Code article = <valeur2>
 						And Que je rentre dans le nouvel onglet, et que je tappe PMS170 et je clique sur le bouton OK			
