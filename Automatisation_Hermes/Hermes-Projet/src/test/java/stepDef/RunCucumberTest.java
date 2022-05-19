@@ -9,7 +9,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
 //@RunWith(Cucumber.class)
-//@CucumberOptions(features="Hermes-Projet/Automatisation_Hermes", glue= {"StepDefinitions"},monochrome=true)
+@CucumberOptions(features="src/test/resources/cucumber", glue= {"StepDefinitions"},monochrome=true,"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 @IncludeEngines("cucumber")
 @SelectClasspathResource("cucumber")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
