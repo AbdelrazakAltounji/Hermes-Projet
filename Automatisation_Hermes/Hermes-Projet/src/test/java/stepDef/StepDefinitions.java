@@ -57,7 +57,7 @@ public class StepDefinitions {
 		//System.setProperty("webdriver.chrome.driver","C:\\Abdelrazak\\chromedriver.exe");
 		capa.setBrowserName("chrome");
 		capa.setPlatform(Platform.ANY);
-		driver = new RemoteWebDriver(new URL(" 159.122.175.120:30723"),capa);
+		driver = new RemoteWebDriver(new URL(" http://192.168.31.105:4444"),capa);
 		//driver = new RemoteWebDriver(new URL("https://selenium.wap-test-platform-iks-086d0feb796ce72f6b820703a879a158-0000.eu-de.containers.appdomain.cloud"), capa);
 
 		
