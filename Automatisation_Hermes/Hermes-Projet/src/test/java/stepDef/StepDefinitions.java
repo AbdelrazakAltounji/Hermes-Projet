@@ -3,10 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-
+import io.cucumber.java.Before;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -46,7 +47,29 @@ public class StepDefinitions {
 	//WebDriverListener listener = new WebDriverListener();
 
 	//WebDriver decorated = new EventFiringDecorator(listener).decorate(driver);
-	
+	@Before
+	public void SecondSD() throws MalformedURLException {
+		String string = "chrome";	
+		
+			if(string =="firefox")
+			{
+			 FirefoxOptions firefoxOptions = new FirefoxOptions();
+			 firefoxOptions.setCapability("browserName","firefox");
+			 firefoxOptions.setCapability("platform", Platform.ANY);
+			 driver = new RemoteWebDriver(new URL("https://selenium.wap-test-platform-iks-086d0feb796ce72f6b820703a879a158-0000.eu-de.containers.appdomain.cloud"),firefoxOptions);
+			}
+		else if (string =="chrome")
+			{
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.setCapability("browserName","chrome");
+				chromeOptions.setCapability("platform", Platform.ANY);
+				driver = new RemoteWebDriver(new URL("https://selenium.wap-test-platform-iks-086d0feb796ce72f6b820703a879a158-0000.eu-de.containers.appdomain.cloud"), chromeOptions);	
+			}
+		else if (string =="local")
+		{
+			driver = new FirefoxDriver();
+		}
+	}
 		
 	@Given("Que je suis sur le site")
 	public void visit_site_hermes() throws MalformedURLException {
