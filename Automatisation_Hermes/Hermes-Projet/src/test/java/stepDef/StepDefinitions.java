@@ -55,7 +55,7 @@ public class StepDefinitions {
 		//driver = new ChromeDriver();
 		DesiredCapabilities capa = new DesiredCapabilities(); 
 		//System.setProperty("webdriver.chrome.driver","C:\\Abdelrazak\\chromedriver.exe");
-		capa.setBrowserName("chrome");
+		capa.setBrowserName("firefox");
 		capa.setPlatform(Platform.ANY);
 		driver = new RemoteWebDriver(new URL("https://selenium.wap-test-platform-iks-086d0feb796ce72f6b820703a879a158-0000.eu-de.containers.appdomain.cloud"), capa);
 
