@@ -83,6 +83,8 @@ public class StepDefinitions {
 		
 		//System.setProperty("webdriver.chrome.driver","C:\\Abdelrazak\\chromedriver.exe");
 		driver.get("https://mingle-portal.eu1.inforcloudsuite.com/IBM1_DEM/dd01c7cd-9f46-418c-be0a-9e5612067c74?favoriteContext=%7B%22type%22%3A%22page%22%2C%22id%22%3A%229d2e4bf6-eb67-42e9-856c-15415d03c3e6%22%2C%22source%22%3A7%7D&LogicalId=lid://infor.homepages.1");
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
 	}
 	
 	@And("Que je saisisse mes identifiants et que je me connecte")
