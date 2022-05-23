@@ -174,7 +174,7 @@ public class StepDefinitions {
 		  
 		  int i = 0;
 		  
-		  int count = 11;
+		  int count = 12;
 		  for(i = 1;i <= count;i++) {
 			
 			if(driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[6]/div/div[2]/div[2]/div[1]/div/div[2]/div/div[3]/div/div[4]/div[3]/div/div["+i+"]/div[14]")).isDisplayed()){
