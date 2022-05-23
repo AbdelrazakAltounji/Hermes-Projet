@@ -101,7 +101,7 @@ public String Base64_id(String motdepasse) {
 		Encoder encoder = Base64.getEncoder();
 		String originalString = motdepasse;
 		String encodedString=encoder.encodeToString(originalString.getBytes());
-		System.out.println("Le mot de pass Encrypter :: " +encodedString);
+		//System.out.println("Le mot de pass Encrypter :: " +encodedString);
 		Decoder decoder = Base64.getDecoder();
 		byte[] bytes=decoder.decode(encodedString);
 		String decodedString = new String(bytes);
