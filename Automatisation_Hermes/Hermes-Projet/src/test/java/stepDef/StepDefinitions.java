@@ -88,6 +88,7 @@ public class StepDefinitions {
 	@And("Que je saisisse mes identifiants et que je me connecte")
 		public void saisi_donnee() throws NoSuchAlgorithmException, NoSuchProviderException {
 		hermesMethods = new HermesMethods();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String pass = hermesMethods.Base64();
 		hermesMethods.connexion(driver , pass);
 		
