@@ -51,7 +51,7 @@ public class StepDefinitions {
 	
 
 
-	/*
+	
 	@Before
 	public void SecondSD() throws MalformedURLException {
 		String string = "chrome";	
@@ -75,24 +75,14 @@ public class StepDefinitions {
 			driver = new FirefoxDriver();
 		}
 	}
-	*/
+	
 		
 	
 	@Given("Que je suis sur le site")
 	public void visit_site_hermes() throws MalformedURLException {
 		
-		System.setProperty("webdriver.chrome.driver","C:\\Abdelrazak\\chromedriver.exe");
-		driver = new ChromeDriver();
-		
-		//DesiredCapabilities capa = new DesiredCapabilities(); 
 		//System.setProperty("webdriver.chrome.driver","C:\\Abdelrazak\\chromedriver.exe");
-		 //driver = new RemoteWebDriver(new URL(" 159.122.175.120:30723"),capa);
-		//capa.setBrowserName("chrome");
-		//capa.setPlatform(Platform.ANY);
-		//driver = new RemoteWebDriver(new URL("https://selenium.wap-test-platform-iks-086d0feb796ce72f6b820703a879a158-0000.eu-de.containers.appdomain.cloud"), capa);
-	
-	
-	driver.get("https://mingle-portal.eu1.inforcloudsuite.com/IBM1_DEM/dd01c7cd-9f46-418c-be0a-9e5612067c74?favoriteContext=%7B%22type%22%3A%22page%22%2C%22id%22%3A%229d2e4bf6-eb67-42e9-856c-15415d03c3e6%22%2C%22source%22%3A7%7D&LogicalId=lid://infor.homepages.1");
+		driver.get("https://mingle-portal.eu1.inforcloudsuite.com/IBM1_DEM/dd01c7cd-9f46-418c-be0a-9e5612067c74?favoriteContext=%7B%22type%22%3A%22page%22%2C%22id%22%3A%229d2e4bf6-eb67-42e9-856c-15415d03c3e6%22%2C%22source%22%3A7%7D&LogicalId=lid://infor.homepages.1");
 	}
 	
 	@And("Que je saisisse mes identifiants et que je me connecte")
@@ -107,31 +97,24 @@ public class StepDefinitions {
 	
 	@And ("Dans le menu M3 je navigue vers la page de tableau de valeur")
 	public void chercher_mot() {
-	driver.get("https://mingle-portal.eu1.inforcloudsuite.com/IBM1_DEM/bd13039e-19fd-43d7-82e7-1df47470691e?favoriteContext=bookmark%3FMMS001%26fieldNames%3DW1OBKV%2C%2CW2OBKV%2C%2CWFSLC2%2C%2CWTSLC2%2C%2CWFSLC3%2C%2CWTSLC3%2C%26includeStartPanel%3DTrue%26source%3DMForms%26requirePanel%3DTrue%26sortingOrder%3D2%26view%3DA02-01%26panel%3DB%26tableName%3DMITMAS%26keys%3DMMCONO%2C770%2CMMITNO%2C%2B&LogicalId=lid://infor.m3.m3");
-	driver.switchTo().frame("m3h5_bd13039e-19fd-43d7-82e7-1df47470691e");
-	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-   
-		//EventFiringWebDriver eventHand = new EventFiringWebDriver(driver);
-		//eventHand.findElement(By.xpath("/html/body/lm-app/lm-page-container/div/lm-page-list/div/lm-page/div/div/div/lm-widget-container[2]/div/div[1]/button[1]")).click();
-		//eventHand.findElement(By.xpath("/html/body/lm-app/lm-page-container/div/lm-page-list/div/lm-page/div/div/div/lm-widget-container[2]/div/div[1]/button[2]")).click();
-		//eventHand.findElement(By.xpath("//*[@id=\"m3-menu-search\"]")).sendKeys(mot);
-		//eventHand.findElement(By.xpath("//*[@id=\"m3-menu-search\"]")).sendKeys(Keys.ENTER);
+		driver.get("https://mingle-portal.eu1.inforcloudsuite.com/IBM1_DEM/bd13039e-19fd-43d7-82e7-1df47470691e?favoriteContext=bookmark%3FMMS001%26fieldNames%3DW1OBKV%2C%2CW2OBKV%2C%2CWFSLC2%2C%2CWTSLC2%2C%2CWFSLC3%2C%2CWTSLC3%2C%26includeStartPanel%3DTrue%26source%3DMForms%26requirePanel%3DTrue%26sortingOrder%3D2%26view%3DA02-01%26panel%3DB%26tableName%3DMITMAS%26keys%3DMMCONO%2C770%2CMMITNO%2C%2B&LogicalId=lid://infor.m3.m3");
+		driver.switchTo().frame("m3h5_bd13039e-19fd-43d7-82e7-1df47470691e");
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
 		
 	}
 			
 	@And("Je rentre les valeurs TpA = {string} et Code article = {string}")
-		public void remplir_champs(String valeur1 , String valeur2) throws MalformedURLException {
+	public void remplir_champs(String valeur1 , String valeur2) throws MalformedURLException {
 		EventFiringWebDriver eventHandler = new EventFiringWebDriver(driver);
 		eventHandler.findElement(By.xpath("//input[@id='W1OBKV']")).sendKeys(valeur1);
-			
-			
-			WebElement num = driver.findElement(By.xpath("//input[@id='W2OBKV']"));
-			num.sendKeys(valeur2);
-			num.sendKeys(Keys.chord(Keys.CONTROL,"a"));
-			num.sendKeys(Keys.chord(Keys.CONTROL,"c"));
-			num.sendKeys(Keys.chord(Keys.CONTROL,"r"));
-		    System.out.print(valeur1);  
-		    System.out.print(valeur2);  
+		WebElement num = driver.findElement(By.xpath("//input[@id='W2OBKV']"));
+		num.sendKeys(valeur2);
+		num.sendKeys(Keys.chord(Keys.CONTROL,"a"));
+		num.sendKeys(Keys.chord(Keys.CONTROL,"c"));
+		num.sendKeys(Keys.chord(Keys.CONTROL,"r"));
+		System.out.print(valeur1);  
+		System.out.print(valeur2);  
 
 			
 		}
@@ -213,28 +196,6 @@ public class StepDefinitions {
 				 } 
 		  }
 		
-			/*
-			hermesMethods = new HermesMethods();
-			if (hermesMethods.verification(driver) == true) {
-		
-
-			  String val2 = driver.findElement(By.cssSelector(".slick-cell.l0.r0.alignRight")).getText();
-			 // Assert.assertTrue(val2.contains(valeur4));
-			    
-			
-			    if (val2.equals(valeur4)) {
-				    System.out.print(val2);  
-				    System.out.print("C'est La bonne valeur");  	
-			    } else {
-			    	
-				   Assert.fail("mauvaise valeur"); 
-			    }
-			}
-			else {
-				Assert.fail("Erreur");
-			}
-		
-				*/
 		}
 	
 	
